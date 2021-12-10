@@ -1,0 +1,87 @@
+**Comment 1
+*HEADING
+ D.E.N  J - INTEGRAL          
+**Comment 
+*SYSTEM 
+**Comment    
+5.0, 
+*NODE, test=1,
+nset="                      2 5 5   chars                                                                                                                                                                                                                    "
+1, ,
+7, 10.
+87, 10., 10.
+**Comment 
+  247,    -10.,    10.
+  327,    -10.
+   91,      10.0,    30.0
+  251,    -10.0,    30.0
+  321, 
+  152,
+   78,
+   68,
+ 12.3,
+  -50,
+   -1,
+   0.,
+*ngen,nset = end1
+87,247,20
+*NGEN,
+NSET=END2
+91,251,20
+*NFILL
+END1,END2,4,1
+*NGEN,NSET=TIP
+1,321,20
+*NGEN,NSET="OUTER asdfa"
+7,87,20
+87,247,20
+247,327,20
+*NFILL,SINGULAR=1
+TIP,"OUTER asdfa",6,1
+*ELEMENT,TYPE=CPE8
+1,  1,3,43,41,  2,23,42,21
+*ELGEN,ELSET=EALL,test="                                                                                                                                                                                                                                             "
+1,3,2,1,8,40,10
+23,3,2,1,4,40,10
+*NSET,NSET=XAXIS,GENERATE
+321,327
+*NSET,NSET=YAXIS,GENERATE
+247,251
+247,327,20
+*ELSET,ELSET=PULL
+25,35,45,55
+*NSET,NSET=CRACK,GENERATE
+1,321,20
+*ELSET,ELSET=DRAW,GENERATE
+1,71,10
+2,72,10
+3,73,10
+*SOLID SECTION,MATERIAL=A1,ELSET=EALL
+1., 
+*MATERIAL,NAME=A1
+*ELASTIC
+30.E6,.3
+*BOUNDARY
+XAXIS,2
+YAXIS,1
+*STEP
+*STATIC
+*DLOAD
+PULL,P2,-100.
+*CONTOUR INTEGRAL,FREQUENCY=1,CONTOURS=3,SYMM,OUTPUT=BOTH
+CRACK, -1.0, 0.0
+*CONTOUR INTEGRAL,FREQUENCY=1,CONTOURS=3,SYMM,OUTPUT=BOTH,TYPE=K FACTORS
+CRACK, -1.0, 0.0
+*CONTOUR INTEGRAL,FREQUENCY=1,CONTOURS=3,SYMM,OUTPUT=BOTH,TYPE=T-STRESS
+CRACK, -1.0, 0.0
+*ENERGY PRINT
+*NODE PRINT
+U,RF
+*EL PRINT
+S,E
+*NODE FILE
+U, 
+*OUTPUT,FIELD
+*NODE OUTPUT
+U,
+*END STEP
