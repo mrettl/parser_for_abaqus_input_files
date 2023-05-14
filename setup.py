@@ -10,7 +10,7 @@ setup(
     package_dir={
         'abaqus_parser': 'abaqus_parser'
     },
-    url='',
+    url='https://github.com/mrettl/abaqus_parser',
     license='MIT',
     author='Matthias Rettl',
     author_email='',
