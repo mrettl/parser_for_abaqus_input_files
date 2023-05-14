@@ -3,9 +3,9 @@ from collections import UserString
 
 import numpy as np
 
-import abq
+import abaqus_parser
 
-LOGGER = abq.LOGGER.getChild(__name__)  # type: logging.Logger
+LOGGER = abaqus_parser.LOGGER.getChild(__name__)  # type: logging.Logger
 
 
 def write_comment_line(io, line):

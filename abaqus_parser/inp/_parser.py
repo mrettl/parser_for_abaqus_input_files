@@ -1,6 +1,6 @@
 import ply.yacc as yacc
 
-from abq.inp._lexer import tokens
+from abaqus_parser.inp._lexer import tokens
 
 precedence = [
     ["left", "START_WITH_COMMENT"],

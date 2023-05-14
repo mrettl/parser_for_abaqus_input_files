@@ -1,6 +1,7 @@
-from abq import inp
+from abaqus_parser import inp
 
 if __name__ == '__main__':
+    # parse abaqus input from string
     content = inp.read_from_string(
         "*Node, nset=set-1\n"
         "1, 0, 0, 0\n"
@@ -26,6 +27,12 @@ if __name__ == '__main__':
         "15, 16\n"
     )
 
+    # Rename node set
+    node_block = content[0]
+    node_block_parameters = node_block["parameters"]
+    node_block_parameters["NSET"] = "ALL_NODES"
+
+    # write updated input to string
     print(inp.write_to_string(content))
 
 

@@ -1,6 +1,6 @@
 import unittest
 
-from abq import inp
+from abaqus_parser import inp
 
 
 class AbaqusInputTestCase(unittest.TestCase):
