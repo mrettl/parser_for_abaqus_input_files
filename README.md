@@ -1,6 +1,6 @@
-# Abaqus Parser
+# Parser for Abaqus input files
 
-Abaqus Parser is a Python tool to parse and write abaqus input files.
+This parser is a Python tool to parse and write abaqus input files.
 The parsed data are (nested) Python lists, dictionaries, strings, floats and integers.
 
 The parsed input is a list of keyword blocks and comments.
