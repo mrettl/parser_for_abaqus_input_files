@@ -15,6 +15,6 @@ jobs:
       - name: Install pytest coverage
         run: pip install "pytest-cov==4.0.0"
       - name: Run tests and collect coverage
-        run: pytest --cov abaqus_parser
+        run: pytest --cov abq_parser
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
