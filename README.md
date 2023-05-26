@@ -1,6 +1,8 @@
-# Abaqus Parser
+![GitHub all releases](https://img.shields.io/github/downloads/mrettl/parser_for_abaqus_input_files/total)
 
-Abaqus Parser is a Python tool to parse and write abaqus input files.
+# Parser for Abaqus input files
+
+This parser is a Python tool to parse and write abaqus input files.
 The parsed data are (nested) Python lists, dictionaries, strings, floats and integers.
 
 The parsed input is a list of keyword blocks and comments.
