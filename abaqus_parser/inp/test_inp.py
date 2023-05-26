@@ -1,11 +1,14 @@
 import unittest
+import os
 
 from abaqus_parser import inp
 
 
 class AbaqusInputTestCase(unittest.TestCase):
     def test_read_write(self):
-        inp_content = inp.read_from_file("../../res/inp/test/2D_jintegral2d_cpe8.inp")
+        home_dir = os.path.abspath(__file__ + "../../../..")
+
+        inp_content = inp.read_from_file(home_dir + "/res/inp/test/2D_jintegral2d_cpe8.inp")
         self.assertEqual(34, len(inp_content))
         self.assertEqual(inp_content[0], "**Comment 1")
         self.assertEqual(inp_content[-8], dict(
@@ -28,18 +31,19 @@ class AbaqusInputTestCase(unittest.TestCase):
         self.assertEqual(inp_content, inp_content_reload)
 
         # write/read from file
-        inp.write_to_file("../../res/inp/test/2D_jintegral2d_cpe8_out.inp", inp_content)
-        inp_content_reload = inp.read_from_file("../../res/inp/test/2D_jintegral2d_cpe8_out.inp")
+        inp.write_to_file(home_dir + "/res/inp/test/2D_jintegral2d_cpe8_out.inp", inp_content)
+        inp_content_reload = inp.read_from_file(home_dir + "/res/inp/test/2D_jintegral2d_cpe8_out.inp")
         self.assertEqual(inp_content, inp_content_reload)
 
         # count lines
-        with open("../../res/inp/test/2D_jintegral2d_cpe8.inp", "r") as inp_file:
+        with open(home_dir + "/res/inp/test/2D_jintegral2d_cpe8.inp", "r") as inp_file:
             expected_line_number = len(inp_file.readlines())
 
-        with open("../../res/inp/test/2D_jintegral2d_cpe8_out.inp", "r") as inp_file:
+        with open(home_dir + "/res/inp/test/2D_jintegral2d_cpe8_out.inp", "r") as inp_file:
             actual_line_number = len(inp_file.readlines())
 
         self.assertEqual(expected_line_number, actual_line_number)
+
 
 if __name__ == '__main__':
     unittest.main()
