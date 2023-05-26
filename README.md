@@ -23,7 +23,7 @@ is `['CONSTANT', 23, 1e-06, 0.1]`.
 Read and write from an abaqus input file:
 
 ```python
-from abaqus_parser import inp
+from abq_parser import inp
 content = inp.read_from_file("abaqus_input_file.inp")
 inp.write_to_file("modified_abaqus_input_file.inp", content)
 ```
@@ -33,7 +33,7 @@ inp.write_to_file("modified_abaqus_input_file.inp", content)
 Set new coordinates for the first node in the node block.
 
 ```python
-from abaqus_parser import inp
+from abq_parser import inp
 content = inp.read_from_string("*Node\n1, 0.0, 0.0, 0.0")
 content[0]["data"][0] = [1, 10., 0., 0.]
 print(content)

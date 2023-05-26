@@ -1,4 +1,4 @@
-from abaqus_parser import inp
+from abq_parser import inp
 
 if __name__ == '__main__':
     # parse abaqus input from string

@@ -3,12 +3,12 @@ from io import StringIO
 import logging
 from collections import abc
 
-import abaqus_parser
-from abaqus_parser.inp import util
-from abaqus_parser.inp import _parser
-from abaqus_parser.inp import _lexer
+import abq_parser
+from abq_parser.inp import util
+from abq_parser.inp import _parser
+from abq_parser.inp import _lexer
 
-LOGGER = abaqus_parser.LOGGER.getChild(__name__)  # type: logging.Logger
+LOGGER = abq_parser.LOGGER.getChild(__name__)  # type: logging.Logger
 INP_DATA = Sequence[Union[str, abc.Mapping]]
 
 

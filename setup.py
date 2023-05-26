@@ -1,14 +1,14 @@
 from setuptools import setup
 
 setup(
-    name='abaqus_parser',
+    name='abq_parser',
     description='Parse and write Abaqus Input files.',
-    version='1.0',
+    version='2.0',
     packages=[
-        'abaqus_parser',
-        'abaqus_parser.inp'],
+        'abq_parser',
+        'abq_parser.inp'],
     package_dir={
-        'abaqus_parser': 'abaqus_parser'
+        'abq_parser': 'abq_parser'
     },
     url='https://github.com/mrettl/abaqus_parser',
     license='MIT',
