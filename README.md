@@ -1,3 +1,5 @@
+![GitHub all releases](https://img.shields.io/github/downloads/mrettl/parser_for_abaqus_input_files/total)
+
 # Parser for Abaqus input files
 
 This parser is a Python tool to parse and write abaqus input files.
