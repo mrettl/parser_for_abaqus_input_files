@@ -1,4 +1,5 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/mrettl/parser_for_abaqus_input_files/total)
+[![codecov](https://codecov.io/gh/mrettl/parser_for_abaqus_input_files/branch/main/graph/badge.svg?token=6XJHWS8JHN)](https://codecov.io/gh/mrettl/parser_for_abaqus_input_files)
 
 # Parser for Abaqus input files
 
